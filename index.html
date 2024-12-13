@@ -2,18 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Azionne, Jmik, Clarke,Ayya, Umberto" />
-    <meta name="keywords" content="New York city ski resort" />
+    <meta name="author" content="Azionne, Jmik, Clarke, Ayya, Umberto" />
+    <meta name="keywords" content="New York ski resort" />
     <meta
       name="description"
-      content="Winter vacaiton for families in NY city, ski resort"
+      content="Winter vacation ski resorts in New York"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="../winter-vacation-spots/src/pages/index.css"
-    />
+    <link rel="stylesheet" href="./src/pages/index.css" />
     <title>Dec-Code-jam-2024</title>
   </head>
   <body>
@@ -52,74 +49,22 @@
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Top resorts</h2>
           <ul class="destinations__cards">
-            <!-- <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 1</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 2</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 3</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 4</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 5</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 6</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 7</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 8</h3>
-              </div>
-            </li>
-
-            <li class="card">
-              <div class="card__content">
-                <h3 class="card__text">Resort 9</h3>
-              </div>
-            </li> -->
+            <template id="card__template">
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <h2 class="card__title"></h2>
+                <p class="card__description"></p>
+              </li>
+            </template>
           </ul>
         </section>
-        <template id="card__template">
-          <li class="card">
-            <img src="" alt="" class="card__image" />
-            <h2 class="card__title"></h2>
-            <p class="card__description"></p>
-          </li>
-        </template>
+
         <!----<section class="routes" id="routes">
           <div class="routes__content">
             <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
             <div class="routes-info">
             <p class="routes__text">
-              Our interactive map highlights the optimal route between 9 premier
+              Our interactive map highlights the optimal route between 9 premiere
               ski resorts in New York. Visualize your perfect ski trip, easily
               plan your journey, and discover the best way to explore the
               breathtaking slopes of the Adirondacks. With our detailed route

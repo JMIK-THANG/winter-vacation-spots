@@ -1,35 +1,69 @@
 .destinations__cards {
- display:grid; 
- grid-template-columns: repeat(3,1fr);
- margin:0; 
- padding:0; 
- 
-}
-.destinations__title{ 
-      margin:0; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 .card {
   max-width: 400px;
   width: 100%;
   list-style: none;
-  padding: 0;
+  padding: 20px;
 }
-.card__title{ 
-      margin:0; 
-      padding:10px 0; 
+.card__title {
+  margin: 0;
+  max-width: 350px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.card__description{ 
-      padding-bottom:30px; 
-      margin:0; 
+.card__description {
+  padding-bottom: 30px;
+  margin: 0;
 }
 .card__image {
   width: 450px;
   height: 450px;
   object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 12px;
 }
 
-@media screen and (max-width: 500px) {
-  .page {
-    /* padding: 0 20px; */
+.destinations__title {
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 627px) {
+  .card {
+    padding-bottom: 20px;
+  }
+  .destinations__cards {
+    grid-template-columns: repeat(auto-fit, 288px);
+    row-gap: 20px;
+    column-gap: 20px;
+    flex-direction: column;
+  }
+
+  .card__image {
+    height: 288px;
+    width: 288px;
+  }
+
+  .card__title {
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
