@@ -1,5 +1,6 @@
 .tips__videos {
     display: flex;
+    justify-content: space-around;
     gap: 10px;
 }
 
@@ -10,6 +11,7 @@
 @media screen and (max-width: 627px) {
     .tips__videos {
         flex-direction: column;
+
     }
 
     .tips__videos-item {
