@@ -5,10 +5,12 @@
   margin: 0;
   gap: 20px;
 }
+
 .card {
   list-style-type: none;
   margin: 0;
 }
+
 .card__title {
   margin: 0;
   font-size: 20px;
@@ -30,7 +32,7 @@
   height: 350px;
   object-fit: cover;
   border-radius: 10px;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .destinations__title {
@@ -39,6 +41,7 @@
   display: flex;
   justify-content: center;
 }
+
 /* .filter {
   display: flex;
   align-items: center;
@@ -86,14 +89,17 @@
   max-height: 75vh;
   object-fit: cover;
 } */
+
 @media screen and (max-width: 627px) {
   .card {
     padding: 0;
   }
 
   .destinations__cards {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 20px;
+    /* grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px; */
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .card__image {
@@ -102,12 +108,17 @@
   }
 
   .card__title {
-    max-width: 350px;
+    max-width: 288px;
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  .card__description {
+    margin: 10px 0 30px;
+    max-width: 288px;
   }
 }
