@@ -15,38 +15,49 @@
     />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="./src/pages/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--new code-->
     <title>Dec-Code-jam-2024</title>
   </head>
   <body>
     <div class="page">
       <section class="winter page__section">
-        <header class="header"></header>
-        <img src="" alt="" class="header__img" />
-        <video controls loop width="1280" height="800" autoplay muted>
-          <source
-            src="src/pages/video/7418-200092486_medium (1).mp4"
-            type="video/mp4"
-          />
-        </video>
-        <nav class="nav">
-          <img src="" alt="" class="nav-img" />
-          <ul class="nav__links">
-            <li>
-              <a class="nav__link" href="#destinations">Desitinations</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#routes">Route</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#weather">Weather</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#data">Data</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="header__title">Slope Scout</h1>
-        <p class="header__text">Your map to mountain bliss!</p>
+        <header class="header">
+          <img src="" alt="" class="header__img" />
+          <video
+            class="header__loop"
+            loop
+            width="1280"
+            height="800"
+            autoplay
+            muted
+          >
+            <source
+              src="src/pages/video/7418-200092486_medium (1).mp4"
+              type="video/mp4"
+            />
+          </video>
+          <h1 class="header__title">Slope Scout</h1>
+
+          <nav class="nav">
+            <img src="" alt="" class="nav-img" />
+            <ul class="nav__menu">
+              <li>
+                <a class="nav__link" href="#destinations">Desitinations</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#routes">Route</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#tips">Ski Tips</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#data">Data</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="header__text">Your map to mountain bliss!</p>
+        </header>
       </section>
 
       <main class="content page__section">
@@ -90,10 +101,11 @@
           </article>
         </template>
 
-        <!----<section class="routes" id="routes">
+        <!-- <section class="routes" id="routes">
           <div class="routes__content">
             <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
             <div class="routes-info">
+              <iframe src="" width="800" height="600"></iframe>
             <p class="routes__text">
               Our interactive map highlights the optimal route between 9 premier
               ski resorts in New York. Visualize your perfect ski trip, easily
@@ -104,12 +116,33 @@
           </div>
         </section> -->
 
-        <section class="weather" id="weather">
-          <h2 class="weather__title">Real-time weather report</h2>
-
-          <p class="weather__description">
-            Get the latest weather forecasts here!
-          </p>
+        <section class="tips" id="tips">
+          <h2 class="tips__title">Ski tips for beginners</h2>
+          <p class="tips__description">Start out right!</p>
+          <div class="tips__videos">
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/FvMpcVu0O_o?si=91Ayx2G6nYOMwFMM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PfJe653v24I?si=5cDqnmZ34xnJHFho"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </section>
 
         <section class="data" id="data">

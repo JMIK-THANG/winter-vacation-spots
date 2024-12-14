@@ -79,20 +79,20 @@ function renderCard(cardElement) {
   cardContainer.prepend(cardElement);
 }
 
-const modalPreviewImage = document.querySelector(".modal__preview-image"); 
-const previewImage = codument.querySelector(".modal__image"); 
-const previewDescription = document.querySelector("modal__description")
-function openModal(modal) { 
-  modal.classList.add(modal_opened); 
+const modalPreviewImage = document.querySelector(".modal__preview-image");
+const previewImage = document.querySelector(".modal__image");
+const previewDescription = document.querySelector("modal__description");
+function openModal(modal) {
+  modal.classList.add(modal_opened);
 }
-function closeModal(modal) { 
-  modal.classList.remove(modal_opened); 
+function closeModal(modal) {
+  modal.classList.remove(modal_opened);
 }
 
-function handlePreviewImage(data) { 
+function handlePreviewImage(data) {
   previewDescription.textContent = data.name;
   previewImage.src = data.link;
   previewImage.alt = data.name;
   openModal(modalPreviewImage);
 }
-modalPreviewImage.addEventListener('click', handlePreviewImage); 
+modalPreviewImage.addEventListener("click", handlePreviewImage);
