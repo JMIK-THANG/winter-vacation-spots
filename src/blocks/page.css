@@ -1,4 +1,5 @@
 .page {
+
   min-height:100vh; 
   width:100%; 
   margin:0 auto; 
@@ -8,4 +9,8 @@
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.destinations {
+  padding: 60px 0 30px;
 }
