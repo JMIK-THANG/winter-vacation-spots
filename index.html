@@ -9,6 +9,10 @@
       content="Winter vacaiton for families in NY city, ski resort"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="./src/pages/index.css" />
     <title>Dec-Code-jam-2024</title>
@@ -45,13 +49,30 @@
         <p class="header__text">Your map to mountain bliss!</p>
       </section>
 
-      <main class="content">
+      <main class="content page__section">
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Top resorts</h2>
+          <div class="filter content__filter">
+            The display type:
+            <button
+              type="button"
+              class="button filter__button"
+              data-elements-type="grid"
+            >
+              <i class="fa-brands fa-microsoft"></i>
+            </button>
+            <button
+              type="button"
+              class="button filter__button"
+              data-elements-type="column"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
           <ul class="destinations__cards"></ul>
         </section>
 
- 
+        <!-- Card Template -->
         <template id="card__template">
           <li class="card page__section">
             <img src="" alt="" class="card__image" />
@@ -59,6 +80,16 @@
             <p class="card__description"></p>
           </li>
         </template>
+
+        <!-- Default card template -->
+        <template class="default-card">
+          <article class="card">
+            <div class="card__image" style=""></div>
+            <h3 class="card__title"></h3>
+            <p class="card__description"></p>
+          </article>
+        </template>
+
         <!----<section class="routes" id="routes">
           <div class="routes__content">
             <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
