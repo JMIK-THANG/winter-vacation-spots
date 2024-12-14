@@ -15,6 +15,8 @@
     />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="./src/pages/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--new code-->
     <title>Dec-Code-jam-2024</title>
   </head>
   <body>
@@ -39,7 +41,7 @@
 
           <nav class="nav">
             <img src="" alt="" class="nav-img" />
-            <ul class="nav__links">
+            <ul class="nav__menu">
               <li>
                 <a class="nav__link" href="#destinations">Desitinations</a>
               </li>
@@ -47,7 +49,7 @@
                 <a class="nav__link" href="#routes">Route</a>
               </li>
               <li>
-                <a class="nav__link" href="#weather">Weather</a>
+                <a class="nav__link" href="#tips">Ski Tips</a>
               </li>
               <li>
                 <a class="nav__link" href="#data">Data</a>
@@ -99,10 +101,11 @@
           </article>
         </template>
 
-        <!----<section class="routes" id="routes">
+        <!-- <section class="routes" id="routes">
           <div class="routes__content">
             <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
             <div class="routes-info">
+              <iframe src="" width="800" height="600"></iframe>
             <p class="routes__text">
               Our interactive map highlights the optimal route between 9 premier
               ski resorts in New York. Visualize your perfect ski trip, easily
@@ -113,12 +116,33 @@
           </div>
         </section> -->
 
-        <section class="weather" id="weather">
-          <h2 class="weather__title">Real-time weather report</h2>
-
-          <p class="weather__description">
-            Get the latest weather forecasts here!
-          </p>
+        <section class="tips" id="tips">
+          <h2 class="tips__title">Ski tips for beginners</h2>
+          <p class="tips__description">Start out right!</p>
+          <div class="tips__videos">
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/FvMpcVu0O_o?si=91Ayx2G6nYOMwFMM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PfJe653v24I?si=5cDqnmZ34xnJHFho"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </section>
 
         <section class="data" id="data">
