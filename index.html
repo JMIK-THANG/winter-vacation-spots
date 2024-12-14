@@ -71,12 +71,24 @@
           </div>
           <ul class="destinations__cards"></ul>
         </section>
+        <!-- Previdew image modal -->
+        <div class="popup popup_preview-image">
+          <div class="popup__content">
+            <button type="button" class="popup__close">Close</button>
+            <img src="" alt="" class="popup__image" />
+            <p class="popup__caption"></p>
+          </div>
+        </div>
 
         <!-- Card Template -->
         <template id="card__template">
           <li class="card page__section">
             <img src="" alt="" class="card__image" />
-            <h2 class="card__title"></h2>
+            <div class="card__name-description">
+              <h2 class="card__title"></h2>
+
+              <button class="card__description-button">More</button>
+            </div>
             <p class="card__description"></p>
           </li>
         </template>

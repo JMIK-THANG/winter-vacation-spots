@@ -58,7 +58,7 @@ const initialCards = [
 const cardContainer = document.querySelector(".destinations__cards");
 const cardTemplate = document.querySelector("#card__template");
 
-initialCards.forEach((cardObj) => {
+initialCards.forEach((cardObj, index) => {
   const cardElement = createCard(cardObj);
   renderCard(cardElement);
 });
@@ -66,33 +66,45 @@ function createCard(cardData) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
+
   const cardTitle = cardElement.querySelector(".card__title");
   const cardDescription = cardElement.querySelector(".card__description");
   const cardImage = cardElement.querySelector(".card__image");
+  const buttonDescription = cardElement.querySelector(
+    ".card__description-button"
+  );
   cardTitle.textContent = cardData.name;
-  cardDescription.textContent = cardData.description;
+  // cardDescription.textContent = cardData.description;
   cardImage.src = cardData.link;
   cardImage.alt = cardData.name;
+  buttonDescription.addEventListener("click", () =>
+    handlePreviewImage(cardData)
+  );
+
   return cardElement;
 }
 function renderCard(cardElement) {
   cardContainer.prepend(cardElement);
 }
+const popupPreviewImage = document.querySelector(".popup_preview-image");
+const previewImage = document.querySelector(".popup__image");
+const previewDescription = document.querySelector(".popup__caption");
+const closeButton = document.querySelector(".popup__close");
 
-const modalPreviewImage = document.querySelector(".modal__preview-image"); 
-const previewImage = codument.querySelector(".modal__image"); 
-const previewDescription = document.querySelector("modal__description")
-function openModal(modal) { 
-  modal.classList.add(modal_opened); 
+function openModal(modal) {
+  modal.classList.add("popup_is-opened");
 }
-function closeModal(modal) { 
-  modal.classList.remove(modal_opened); 
+function closeModal(modal) {
+  modal.classList.remove("popup_is-opened");
 }
-
-function handlePreviewImage(data) { 
-  previewDescription.textContent = data.name;
+function handlePreviewImage(data) {
+  console.log(data);
+  previewDescription.textContent = data.description;
   previewImage.src = data.link;
   previewImage.alt = data.name;
-  openModal(modalPreviewImage);
+  openModal(popupPreviewImage);
 }
-modalPreviewImage.addEventListener('click', handlePreviewImage); 
+
+closeButton.addEventListener("click", () => {
+  closeModal(popupPreviewImage);
+});
