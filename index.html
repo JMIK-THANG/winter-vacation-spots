@@ -101,21 +101,6 @@
           </article>
         </template>
 
-        <!-- <section class="routes" id="routes">
-          <div class="routes__content">
-            <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
-            <div class="routes-info">
-              <iframe src="" width="800" height="600"></iframe>
-            <p class="routes__text">
-              Our interactive map highlights the optimal route between 9 premier
-              ski resorts in New York. Visualize your perfect ski trip, easily
-              plan your journey, and discover the best way to explore the
-              breathtaking slopes of the Adirondacks. With our detailed route
-              planning, you can make the most of your winter adventure.
-            </p>
-          </div>
-        </section> -->
-
         <section class="tips" id="tips">
           <h2 class="tips__title">Ski tips for beginners</h2>
           <p class="tips__description">Start out right!</p>
@@ -145,6 +130,28 @@
           </div>
         </section>
 
+        <section class="routes" id="routes">
+          <div class="routes__content">
+            <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
+            <div class="routes-info">
+              <iframe
+              id="myIframe"
+              class="routes__map"
+              src="./graphs/random_route1_full.html"
+              height="800"
+              width="1200"
+              frameborder="0"
+            ></iframe>
+            <p class="routes__text">
+              Our interactive map highlights the optimal route between 9 premier
+              ski resorts in New York. Visualize your perfect ski trip, easily
+              plan your journey, and discover the best way to explore the
+              breathtaking slopes of the Adirondacks. With our detailed route
+              planning, you can make the most of your winter adventure.
+            </p>
+          </div>
+        </section>
+
         <section class="data" id="data">
           <img class="data__image" src="" alt="" />
           <div class="data__content">
@@ -152,13 +159,7 @@
             <p class="data__text">
               Visualization (& explain the data to SE students)
             </p>
-            <iframe
-              src="./graphs/random_route1_full.html"
-              height="800"
-              width="1200"
-              frameborder=""
-              0
-            ></iframe>
+            
             <p class="data__text">
               - What data do you have? How it was collected? - What did you do?
               Was preprocessing required? - How to read your report/what do you
