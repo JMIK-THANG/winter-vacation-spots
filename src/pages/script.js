@@ -58,7 +58,7 @@ const initialCards = [
 const cardContainer = document.querySelector(".destinations__cards");
 const cardTemplate = document.querySelector("#card__template");
 
-initialCards.forEach((cardObj, index) => {
+initialCards.forEach((cardObj) => {
   const cardElement = createCard(cardObj);
   renderCard(cardElement);
 });
