@@ -14,60 +14,142 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
     <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/pages/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--new code-->
     <title>Dec-Code-jam-2024</title>
   </head>
   <body>
+    
     <div class="page">
       <section class="winter page__section">
-        <header class="header"></header>
-        <img src="" alt="" class="header__img" />
-        <video controls loop width="1280" height="800" autoplay muted>
-          <source
-            src="src/pages/video/7418-200092486_medium (1).mp4"
-            type="video/mp4"
-          />
-        </video>
-        <nav class="nav">
-          <img src="" alt="" class="nav-img" />
-          <ul class="nav__links">
-            <li>
-              <a class="nav__link" href="#destinations">Desitinations</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#routes">Route</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#weather">Weather</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#data">Data</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="header__title">Slope Scout</h1>
-        <p class="header__text">Your map to mountain bliss!</p>
+        <header class="header">
+          <img src="" alt="" class="header__img" />
+          <video
+            class="header__loop"
+            loop
+            width="1280"
+            height="800"
+            autoplay
+            muted
+          >
+            <source
+              src="./video/7418-200092486_medium (1) (1).mp4"
+              type="video/mp4"
+            />
+          </video>
+          <h1 class="header__title">Slope Scout</h1>
+
+          <nav class="nav">
+            <img src="" alt="" class="nav-img" />
+            <ul class="nav__menu">
+              <li>
+                <a class="nav__link" href="#destinations">Destinations</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#routes">Route</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#tips">Ski Tips</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#data">Data</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="header__text">Your map to mountain bliss!</p>
+        </header>
       </section>
 
       <main class="content page__section">
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Top resorts</h2>
-          <ul class="destinations__cards">
-            <template id="card__template">
-              <li class="card">
-                <img src="" alt="" class="card__image" />
-                <h2 class="card__title"></h2>
-                <p class="card__description"></p>
-              </li>
-            </template>
-          </ul>
+          <div class="filter content__filter">
+            The display type:
+            <button
+              type="button"
+              class="button filter__button"
+              data-elements-type="grid"
+            >
+              <i class="fa-brands fa-microsoft"></i>
+            </button>
+            <button
+              type="button"
+              class="button filter__button"
+              data-elements-type="column"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul class="destinations__cards"></ul>
+        </section>
+        <!-- Previdew image modal -->
+        <div class="popup popup_preview-image">
+          <div class="popup__content">
+            <button type="button" class="popup__close">Close</button>
+            <img src="" alt="" class="popup__image" />
+            <p class="popup__caption"></p>
+          </div>
+        </div>
+
+        <!-- Card Template -->
+        <template id="card__template">
+          <li class="card page__section">
+            <img src="" alt="" class="card__image" />
+            <div class="card__name-description">
+              <h2 class="card__title"></h2>
+              <button class="card__description-button">More</button>
+            </div>
+            <p class="card__description"></p>
+          </li>
+        </template>
+
+        <!-- Horizontal card template  -->
+<template class="horizontal-card">
+  <article class="card card_content_horizontal">
+    <div class="card__image" style=""></div>
+    <div class="card__description">
+      <h3 class="card__title">
+        Resort
+      </h3>
+</template>
+        <section class="tips" id="tips">
+          <h2 class="tips__title">Ski tips for beginners</h2>
+          <p class="tips__description">Start out right!</p>
+          <div class="tips__videos">
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/FvMpcVu0O_o?si=91Ayx2G6nYOMwFMM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="tips__videos-item"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PfJe653v24I?si=5cDqnmZ34xnJHFho"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </section>
 
-        <!----<section class="routes" id="routes">
+        <section class="routes" id="routes">
+          
+          </div>
           <div class="routes__content">
-            <h2 class="routes__title">The road to: Your <span class="routes__title-bold">ultimate</span> powder paradise</h2>
+            <h2 class="routes__title">The road to: Your <span class="routes__title-bold"> ultimate</span> powder paradise</h2>
             <div class="routes-info">
               <iframe
               id="myIframe"
@@ -109,6 +191,6 @@
         <p>&copy; 2024 Ayya, Z, Umberto, Jmik, Clarke</p>
       </footer>
     </div>
-    <script src="./src/scripts/script.js"></script>
+    <script src="./src/pages/script.js"></script>
   </body>
 </html>
