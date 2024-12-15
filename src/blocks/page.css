@@ -1,29 +1,15 @@
-<<<<<<< HEAD
 .page {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: 0 auto;
-  overflow: auto;
+  padding: 0 20px;
 }
 
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
 }
-=======
-.page {
-  min-height:100vh; 
-  width:100%; 
-  display:flex; 
-  flex-direction:column; 
-  margin:0 auto; 
-}
 
-.page__section {
-  max-width: 1280px;
-  margin: 0 auto;
+.destinations {
+  padding: 60px 0 30px;
 }
->>>>>>> ac7f45a4b82dc1f58a9853b88f5bbed4eb7cecc0
