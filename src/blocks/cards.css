@@ -12,13 +12,20 @@
 
 .card__title {
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 24px;
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   padding-bottom: 20px;
+  color: #983a38;
+  font-style: oblique;
+}
+
+.filter {
+  color: #983a38;
+  justify-content: center;
 }
 
 .card__description {
@@ -37,9 +44,12 @@
 
 .destinations__title {
   margin: 0;
-  margin-bottom: 20px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
+  color: #a21c19;
+  margin-bottom: 75px;
+  font-style: italic;
 }
 .filter {
   display: flex;
@@ -54,7 +64,7 @@
   align-items: center;
   margin: 0px 6.5px;
   background: #e6d7bd;
-  transition:0.3s; 
+  transition: 0.3s;
 }
 .filter__button:hover {
   background-color: #f3f3f3;
@@ -128,7 +138,7 @@
   justify-content: space-between;
 }
 .card__description-button {
-  margin-right:5px; 
+  margin-right: 5px;
   color: #fff;
   outline: none;
   border: none;
@@ -176,10 +186,20 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-style: oblique;
   }
 
   .card__description {
     margin: 10px 0 30px;
     max-width: 288px;
   }
+}
+
+.destinations__title {
+  margin: 0;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #a21c19;
+  margin-bottom: 75px;
 }
