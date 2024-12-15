@@ -91,6 +91,7 @@ const previewImage = document.querySelector(".popup__image");
 const previewDescription = document.querySelector(".popup__caption");
 const closeButton = document.querySelector(".popup__close");
 
+
 function openModal(modal) {
   modal.classList.add("popup_is-opened");
 }
@@ -100,10 +101,21 @@ function closeModal(modal) {
 function handlePreviewImage(data) {
   console.log(data);
   previewDescription.textContent = data.description;
+
+function openModal(modal) {
+  modal.classList.add(modal_opened);
+}
+function closeModal(modal) {
+  modal.classList.remove(modal_opened);
+}
+
+function handlePreviewImage(data) {
+  previewDescription.textContent = data.name;
   previewImage.src = data.link;
   previewImage.alt = data.name;
   openModal(popupPreviewImage);
 }
+
 
 closeButton.addEventListener("click", () => {
   closeModal(popupPreviewImage);
