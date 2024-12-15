@@ -2,10 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  /* grid-template-columns: repeat(auto-fit, 350px); */
   padding: 0;
-  /* margin: 0 auto; */
-  /* gap: 20px; */
 }
 
 .card {
@@ -31,8 +28,8 @@
 }
 
 .card__image {
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -44,7 +41,7 @@
   display: flex;
   justify-content: center;
 }
- .filter {
+.filter {
   display: flex;
   align-items: center;
   padding: 10px 30px;
@@ -127,8 +124,7 @@
   justify-content: space-between;
 }
 .card__description-button {
-  background: transparent;
-  background: #de494e;
+  margin-right:5px; 
   color: #fff;
   outline: none;
   border: none;
@@ -140,7 +136,7 @@
     rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
     rgba(44, 187, 99, 0.15) 0 16px 32px;
   color: green;
-  transition:all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .card__description-button:hover {
