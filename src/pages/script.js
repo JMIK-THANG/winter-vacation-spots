@@ -1,43 +1,43 @@
 const initialCards = [
   {
     name: "Whiteface Mountain",
-    link: "https://images.unsplash.com/photo-1548873902-8b69fb85030a?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://image-tc.galaxy.tf/wijpeg-f3sp0ujcmj3zzmt97flvfmb86/whiteface-mountain-alpine-skiing_standard.jpg?crop=185%2C0%2C1631%2C1223",
     description:
       "Whiteface has the greatest vertical east of the Rockies. More vertical equals longer runs, less time on lifts, no crowds, and endless fun. Whiteface is big, with a diversity of terrain for every level, offering a significant degree of steeps, with access to the slides off the Summit Quad.",
   },
   {
     name: "Gore Mountain",
-    link: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcStb6rcwS7Y4-dYUkhxAZGaxtyiNtA4-9OL_fF539g63iExesUj0hNWYeYLXmarqFjXXMo7qoCgicFPjYdcrz7HGfokt9pAs0joIdNekb0",
+    link: "https://i0.wp.com/savingtimeinabottle.com/wp-content/uploads/2023/11/untitled-1-of-1-123-scaled.jpg?fit=2560%2C1707&ssl=1",
     description:
       "Gore offers scenic skyrides and fun adventure activities during the summer and fall! Our cross-country trail network features snowmaking, grooming, and lights- snowshoers welcome on sides of trails too. Join us day or night at the historic North Creek Ski Bowl!",
   },
   {
     name: "Hunter Mountain",
-    link: "https://comfort-ski.com/upload/hunter-mountain-1.jpg",
+    link: "https://www.newyorkstatedestinations.com/catskills/hunter/images/hunter.jpg",
     description:
       "with a summit that climbs to 3,200 ft. Hunter Mountain maintains renowned terrain across three separate mountains, with high-efficiency, state-of-the-art snowmaking that covers 100 percent of its trails, hence its 'snowmaking capital of the world' reputation.",
   },
   {
     name: "Belleayre Mountain",
-    link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFqmTCL1ihLAihDVp2J1OtK9ujCHwhHUsbbA&s",
+    link: "https://static01.nyt.com/images/2008/03/06/travel/escapes/belleayre_span.600.jpg?quality=75&auto=webp&disable=upscale",
     description:
       "Belleayre is a family-friendly mountain, located in the heart of the Catskill Mountains, where you can find something for the entire family , long cruising trails, bumps, glades, parks, steeps, and a whole bunch of fun.",
   },
   {
     name: "Windham Mountain",
-    link: "https://images.unsplash.com/photo-1486684338211-1a7ced564b0d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://static01.nyt.com/images/2023/12/08/nyregion/00ny-windham01/00ny-windham01-superJumbo.jpg",
     description:
       "Located in New York's Northern Catskills, approximately 150 miles north of New York City and 50 miles south of Albany, Windham Mountain resort is known as a family-friendly resort offering an authentic ski experience and spectacular views in the Northeast region.",
   },
   {
     name: "Greek Peak",
-    link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR8YP0-OGd3ZPDEj33w_-zhOAJOUapQRmyswewI-Agms7a0Mt1wyttEeWvZb__eP2yXfU&usqp=CAU",
+    link: "https://nyskiblog.com/wp-content/uploads/2016/06/greek-peak-ski-trail-map.jpg",
     description:
       "Greek Peak Mountain Resort was founded in 1958 and has remained at the leading edge of the ski industry with forty-four ski trails and eleven glades, six chair lifts, two surface lifts, a tubing conveyor lift, a beginners' slope, and new and improved terrain parks.",
   },
   {
     name: "Peek'n Peak Resort",
-    link: "https://images.unsplash.com/photo-1606928374026-e1c367b17fb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGVmYWNlJTIwbW91bnRhaW58ZW58MHx8MHx8fDA%3D",
+    link: "https://townsquare.media/site/10/files/2024/10/attachment-peak-n-peak.jpg?w=780&q=75",
     description:
       "Peek'n Peak Resort is a versatile destination located in southwestern New York, offering activities year-round",
   },
@@ -57,11 +57,22 @@ const initialCards = [
 
 const cardContainer = document.querySelector(".destinations__cards");
 const cardTemplate = document.querySelector("#card__template");
+const popupPreviewImage = document.querySelector(".popup_preview-image");
+const previewImage = document.querySelector(".popup__image");
+const previewDescription = document.querySelector(".popup__caption");
+const closeButton = document.querySelector(".popup__close");
 
-initialCards.forEach((cardObj) => {
+initialCards.forEach((cardObj, index) => {
   const cardElement = createCard(cardObj);
   renderCard(cardElement);
 });
+function openModal(modal) {
+  modal.classList.add("popup_is-opened");
+}
+function closeModal(modal) {
+  modal.classList.remove("popup_is-opened");
+}
+
 function createCard(cardData) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -85,17 +96,6 @@ function createCard(cardData) {
 }
 function renderCard(cardElement) {
   cardContainer.prepend(cardElement);
-}
-const popupPreviewImage = document.querySelector(".popup_preview-image");
-const previewImage = document.querySelector(".popup__image");
-const previewDescription = document.querySelector(".popup__caption");
-const closeButton = document.querySelector(".popup__close");
-
-function openModal(modal) {
-  modal.classList.add("popup_is-opened");
-}
-function closeModal(modal) {
-  modal.classList.remove("popup_is-opened");
 }
 
 function handlePreviewImage(data) {
