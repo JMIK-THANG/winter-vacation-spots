@@ -1,0 +1,16 @@
+.routes__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #983a38;
+  display: flex;
+  justify-content: center;
+}
+
+.routes__text {
+  font-size: 16px;
+  color: #983a38;
+  font-weight: 500;
+  font-family: "spectral", serif;
+  font-style: italic;
+}
