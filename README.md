@@ -18,4 +18,4 @@ Technologies used in this project include HTML, CSS, Javascript...
 
 This project is deployed on GitHub pages<br> 
 
-[CODEJAM PROJECT LINK](https://jmik-thang.github.io/winter-vacation-spots/)
+[Slope Scout](https://jmik-thang.github.io/winter-vacation-spots/)
