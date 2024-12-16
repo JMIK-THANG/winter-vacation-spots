@@ -2,5 +2,9 @@
      display: flex;
      justify-content: center;
      color: #000;
-     margin: 10px 0;
+     margin: 10px auto;
+     background-color: #F5F5DC;
+     width: 80%;
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
  }

@@ -1,5 +1,5 @@
 .tips__title {
-  font-size: 35px;
+  font-size: 44px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #983a38;
@@ -27,6 +27,7 @@
 
 .tips__videos-item {
   border-radius: 10px;
+  margin: 20px 0 40px;
 }
 
 @media screen and (max-width: 627px) {
@@ -49,6 +50,7 @@
     justify-content: center;
     margin-bottom: 50px;
   }
+
   .tips__videos {
     flex-direction: column;
     align-items: center;

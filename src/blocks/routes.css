@@ -6,7 +6,8 @@
 }
 
 .routes__map {
-  background-color: #016d64;
+  border: 2px solid #016d64;
+  margin-bottom: 40px;
 }
 
 .routes__map-title {
@@ -17,7 +18,7 @@
 }
 
 .routes__title {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #983a38;
@@ -36,6 +37,13 @@
   background-color: #F5F5DC;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 890px) {
+  .routes__map {
+    width: 768px;
+    height: 512px;
+  }
 }
 
 @media screen and (max-width: 627px) {

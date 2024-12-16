@@ -6,7 +6,7 @@
 
 .header__title {
   text-align: center;
-  font-size: 35px;
+  font-size: 44px;
   font-weight: bold;
   position: absolute;
   top: 50%;
@@ -25,6 +25,7 @@
   color: #983a38;
   font-style: italic;
 }
+
 .header__loop {
   object-fit: cover;
   opacity: 70%;
@@ -32,6 +33,7 @@
   filter: blur(0.5px);
   transform: scale(1.1);
 }
+
 @media screen and (max-width: 627px) {
   .header__title {
     font-size: 20px;
