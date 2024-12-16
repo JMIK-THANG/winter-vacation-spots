@@ -15,7 +15,7 @@ const initialCards = [
     name: "Hunter Mountain",
     link: "https://nyskiblog.com/wp-content/uploads/2018/02/hunter-mountain.jpg",
     description:
-      "with a summit that climbs to 3,200 ft. Hunter Mountain maintains renowned terrain across three separate mountains, with high-efficiency, state-of-the-art snowmaking that covers 100 percent of its trails, hence its 'snowmaking capital of the world' reputation.",
+      "With a summit that climbs to 3,200 ft., Hunter Mountain maintains slopes across three separate mountains, with next-gen snowmaking which covers 100% of its trails, making it the 'snowmaking capital of the world.'",
   },
   {
     name: "Belleayre Mountain",
