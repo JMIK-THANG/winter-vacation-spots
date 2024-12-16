@@ -56,15 +56,15 @@ const initialCards = [
 ];
 
 const cardContainer = document.querySelector(".destinations__cards");
-const cardTemplate = document.querySelector("#card__template");
 const popupPreviewImage = document.querySelector(".popup_preview-image");
 const previewImage = document.querySelector(".popup__image");
 const previewDescription = document.querySelector(".popup__caption");
 const closeButton = document.querySelector(".popup__close");
+const horizontalCardTemplate = document.querySelector(".horizontal-card");
 
-initialCards.forEach((cardObj, index) => {
-  const cardElement = createCard(cardObj);
-  renderCard(cardElement);
+initialCards.forEach((cardObj) => {
+  const horizontalCardElement = horizontalCard(cardObj);
+  renderCard(horizontalCardElement);
 });
 function openModal(modal) {
   modal.classList.add("popup_is-opened");
@@ -73,8 +73,8 @@ function closeModal(modal) {
   modal.classList.remove("popup_is-opened");
 }
 
-function createCard(cardData) {
-  const cardElement = cardTemplate.content
+function defaultCard(cardData) {
+  const cardElement = defaultCardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
 
@@ -85,7 +85,6 @@ function createCard(cardData) {
     ".card__description-button"
   );
   cardTitle.textContent = cardData.name;
-  // cardDescription.textContent = cardData.description;
   cardImage.src = cardData.link;
   cardImage.alt = cardData.name;
   buttonDescription.addEventListener("click", () =>
@@ -94,12 +93,24 @@ function createCard(cardData) {
 
   return cardElement;
 }
-function renderCard(cardElement) {
-  cardContainer.prepend(cardElement);
+function horizontalCard(cardData) {
+  const horizontalElement = horizontalCardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+  const cardTitle = horizontalElement.querySelector(".card__title");
+  const cardImage = horizontalElement.querySelector(".card__image");
+  const cardDescription = horizontalElement.querySelector(".card__description");
+  cardTitle.textContent = cardData.name;
+  cardImage.src = cardData.link;
+  cardImage.alt = cardData.name;
+  cardDescription.textContent = cardData.description;
+  cardImage.addEventListener("click", () => {
+    handlePreviewImage(cardData);
+  });
+  return horizontalElement;
 }
 
 function handlePreviewImage(data) {
-  previewDescription.textContent = data.description;
   previewImage.src = data.link;
   previewImage.alt = data.name;
   openModal(popupPreviewImage);
@@ -108,3 +119,6 @@ function handlePreviewImage(data) {
 closeButton.addEventListener("click", () => {
   closeModal(popupPreviewImage);
 });
+function renderCard(cardElement) {
+  cardContainer.prepend(cardElement);
+}
