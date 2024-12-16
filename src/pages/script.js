@@ -73,26 +73,6 @@ function closeModal(modal) {
   modal.classList.remove("popup_is-opened");
 }
 
-function defaultCard(cardData) {
-  const cardElement = defaultCardTemplate.content
-    .querySelector(".card")
-    .cloneNode(true);
-
-  const cardTitle = cardElement.querySelector(".card__title");
-  const cardDescription = cardElement.querySelector(".card__description");
-  const cardImage = cardElement.querySelector(".card__image");
-  const buttonDescription = cardElement.querySelector(
-    ".card__description-button"
-  );
-  cardTitle.textContent = cardData.name;
-  cardImage.src = cardData.link;
-  cardImage.alt = cardData.name;
-  buttonDescription.addEventListener("click", () =>
-    handlePreviewImage(cardData)
-  );
-
-  return cardElement;
-}
 function horizontalCard(cardData) {
   const horizontalElement = horizontalCardTemplate.content
     .querySelector(".card")
