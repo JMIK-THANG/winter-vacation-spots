@@ -1,3 +1,14 @@
+.routes-info {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.routes__map {
+  background-color: #983a38;
+}
+
 .routes__title {
   font-size: 24px;
   font-weight: 700;
@@ -13,4 +24,11 @@
   font-weight: 500;
   font-family: "spectral", serif;
   font-style: italic;
+}
+
+@media screen and (max-width: 627px) {
+  .routes__map {
+    width: 288px;
+    height: 288px;
+  }
 }
