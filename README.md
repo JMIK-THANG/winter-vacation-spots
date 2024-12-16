@@ -50,7 +50,7 @@ conda env list
 **With pip:**
 
 ``` bash
-pip install -r requirements
+pip install -r requirements.txt
 ```
 ## Data Project
 
@@ -74,7 +74,7 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 - Analysis based on various elevation and snow metrics, derived from the mountain statistics web scrape procedure, was processed for the purpose of determining relationships or correlations between these elevation metrics and annual snowfall.
 - Additional analysis was performed regarding the recorded number of trails on the mountain and skiiable acres.
   
-3. Route Optimization
+3. Route Tracking & Optimization
 
 - Utilized OpenStreetMap geolocated coordinates to determine route geometries and distances between any given ski resort in the dataset created by leveraging the [Open Source Routing Machine](https://project-osrm.org/).
 - Selected **Beartown Ski Area** as the first point for the routes in order to maintain a uniform test between random and optimized routing techniques. Selected due to its low `vertical_rise` compared to the rest of the 9 selected resorts and areas, making for easy skiing.
@@ -98,6 +98,55 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 
 
 # Random Route
+![Random Route](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/random_route.png)
+
+**Total Distance: 1718.56 miles**
+
+| |from| 	to| 	distance (mi)|
+|-|-----------|--------|--------|
+|0| 	Beartown Ski Area |	Greek Peak |	268.71| 
+|1 |	Greek Peak |	Windham Mountain |123.64|
+|2 |	Windham Mountain |	Whiteface Mountain |	203.55|
+|3 |	Whiteface Mountain |	Hunter Mountain 	|201.25|
+|4 |	Hunter Mountain |	Holiday Valley |	300.61|
+|5 |	Holiday Valley |	Peek'n Peak Resort |	70.36|
+|6 |	Peek'n Peak Resort |	Gore Mountain 	| 379.17|
+|7 |	Gore Mountain 	|Belleayre Mountain |	171.27|
 
 
 # Optimized Route
+![Optimized Route](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/optimized_route.png)
+
+**Total Distance: 688.45 miles**
+
+| |	from |	to |	distance (mi)|
+|-|-|-|-|
+|0| 	Beartown Ski Area| 	Greek Peak 	|268.71|
+|1| 	Greek Peak| 	Windham Mountain 	|123.64|
+|2| 	Windham Mountain| 	Whiteface Mountain 	|203.55|
+|3| 	Whiteface Mountain| 	Hunter Mountain 	|201.25|
+|4| 	Hunter Mountain| 	Holiday Valley 	|300.61|
+|5| 	Holiday Valley| 	Peek'n Peak Resort 	|70.36|
+|6| 	Peek'n Peak Resort| 	Gore Mountain 	|379.17|
+|7| 	Gore Mountain| 	Belleayre Mountain 	|171.27|
+
+---
+The algorithm builds a route with a start at the lowest `vertical_rise`, this allows uniformity between the random and optimized comparisons. Utilizing the graph information from the DiGraph created earlier, we can determine the appropriate route which minimizes the distance traveled.
+
+While making sure that the next node is within the unvisited set, the next node is decided based on a comparison of all the available distances from the current node. This is determined through a dictionary search of unvisited nodes and their respective distances or weights, and selecting the edge and connected node with the minimum value.
+
+Once the minmum distance between two nodes in the univsited set is determined the route list is appended, this continues for as long as there is a an unvisited node. Once all the nodes have been visited and the minimal distance total is calculated. We insure that the loop is left open/ceased.
+
+We explored utilizing Dijkstra's algorithm to help salve the directed graph, however it became apparent that it did not align with the mission statement provided. Additionally, that algorithm requires an overall end point, and that is not required by this project. That is why we decided to proceed in obtaining the optimal route in this fashion.
+
+To reiterate the strategy of utilizing the graph network. It is designed to capture all distance information determined from the OSRM measurements between all points. Making sure to define the starting point (lowest vertical rise) we determine the next point by getting the minimal distance option, and so on. Once a point is selected as the next_node it is selected as the current node and the procedure is repeated until there are no more nodes to travel to; given that we can only visit each node once.
+
+---
+
+> Visualized directed graph with ski resort nodes and weighted edge distances.
+![DiGraph](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/SKI_Resort_DAG.png)
+
+---
+# Route Conclusions:
+
+The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing.
