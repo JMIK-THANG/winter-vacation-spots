@@ -149,4 +149,4 @@ To reiterate the strategy of utilizing the graph network. It is designed to capt
 ---
 # Route Conclusions:
 
-The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing.
+The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing. Overall an **85.6%** increase in route optimization has been achieved.
