@@ -33,10 +33,13 @@
 }
 
 @media screen and (max-width: 627px) {
+  .nav__menu {
+  }
   .nav {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    width: 288px;
   }
 
   .nav__link {
