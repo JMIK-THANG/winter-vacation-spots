@@ -95,7 +95,18 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 
 # Data Analysis
 
+## Base Elevation vs Annual Snowfall
+![base_snowfall](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/Base_elevation_snowfall.png)
 
+![base_snowfall_KDE](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/base_elevation_snowfall_kde.png)
+
+---
+## Number of Trails by Resort
+![trails_resort](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/trails_resort.png)
+
+---
+## Vertical Rise (ft) by Resort
+![rise_resort](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/verticalrise_resort.png)
 
 # Random Route
 ![Random Route](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/random_route.png)
@@ -149,4 +160,6 @@ To reiterate the strategy of utilizing the graph network. It is designed to capt
 ---
 # Route Conclusions:
 
-The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing. Overall an **85.6%** increase in route optimization has been achieved.
+The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing. Overall an **85.6%** increase in route optimization has been achieved. Additionally, there was an overall improvement on the reported computation time between both routes.
+
+![computation_time](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/computation_time.png)
