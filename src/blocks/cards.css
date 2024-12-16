@@ -134,6 +134,10 @@
   .card__description{ 
     padding: 0 0 30px;
   }
+  .popup__content{ 
+    max-width:75vw; 
+    max-height:75vh; 
+  }
 }
 @media screen and (max-width: 627px) {
   .card {
