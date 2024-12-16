@@ -184,7 +184,7 @@ The optimized route significantly improves upon the distance minimization effici
 
 [Clarke Brodnicki - Software Engineer](https://github.com/MHVXV)
 
-[Azionne - Software Engineer](https://github.com/Azionne)
+[Azionne Vorrice - Software Engineer](https://github.com/Azionne)
 
 [Jmik Thang - Software Engineer](https://github.com/JMIK-THANG)
 
