@@ -25,11 +25,6 @@
   font-family: "spectral", serif;
   font-style: italic;
 }
-@media screen and (max-width: 900){ 
-  #myIframe{ 
-    width:100%; 
-  }
-}
 @media screen and (max-width: 627px) {
   .routes__map {
     width: 288px;
