@@ -31,6 +31,7 @@
   font-family: "spectral", serif;
   font-style: italic;
   width: 800px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 627px) {
@@ -38,4 +39,19 @@
     width: 288px;
     height: 288px;
   }
+
+  .routes__map-title {
+    font-size: 20px;
+    margin: 20px 10px 0;
+  }
+
+  .routes__title {
+    font-size: 20px;
+    margin: 20px 10px 0;
+  }
+
+  .routes__text {
+    width: 300px;
+  }
+
 }
