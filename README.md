@@ -98,14 +98,22 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 ## Base Elevation vs Annual Snowfall
 ![base_snowfall](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/Base_elevation_snowfall.png)
 
+Here the base elevation versus annual snowfall is compared. Peek'n Peak Resort receives high snowfall despite a relatively low base elevation, while Belleayre Mountain has moderate snowfall with a higher base elevation. This scatter plot helps visualize how each resort's location and elevation affects its natural snow conditions.
+
 ![base_snowfall_KDE](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/base_elevation_snowfall_kde.png)
+
+Here the relationship between base elevation and annual snowfall is further examined. The darker blue regions indicate where most resorts cluster in terms of these two metrics. There appear to be two main concentrations of resorts, suggesting two common "types" of ski areas in terms of their elevation and snowfall characteristics.
 
 ---
 ## Number of Trails by Resort
+Gore Mountain leads with over 100 trails, followed by Whiteface Mountain with around 90 trails. This metric is important for skiers as it indicates the variety of options available at each resort. Peek'n Peak Resort has the fewest trails at around 25, suggesting it might be a smaller, more intimate skiing destination.
+
 ![trails_resort](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/trails_resort.png)
 
 ---
 ## Vertical Rise (ft) by Resort
+Whiteface Mountain has the highest vertical drop at around 3,400 feet, while Peek'n Peak Resort has the lowest at under 500 feet. This vertical rise indicates how much elevation change skiers can experience from top to bottom, which is a key factor in determining the potential length and difficulty of ski runs.
+
 ![rise_resort](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/verticalrise_resort.png)
 
 # Random Route
@@ -124,6 +132,12 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 |6 |	Peek'n Peak Resort |	Gore Mountain 	| 379.17|
 |7 |	Gore Mountain 	|Belleayre Mountain |	171.27|
 
+---
+## Random Routing Functionality
+
+The random routing algorithm designed for this experiment is a straightforward system based on the random sampling of a list of numbers based on the size of the provided data frame. The main distinction of this function is that it does select the first point of the route based on the lowest vertical rise. Doing this allows us to best compare random and optimized routing if we are both starting at the same point. The lowest vertical rise is chosen as the first point because one can argue that it would be an easier skiing experience. So the random route is determing by first positioning the lowest vertical rise mountain with a random sample of locations appended ahead of it. A random.seed was placed in order to maintain the same random route between runs and tie together the analysis and the site presentation.
+
+---
 
 # Optimized Route
 ![Optimized Route](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/optimized_route.png)
@@ -142,6 +156,8 @@ Ski resorts and areas were selected based on a geolocation query of the resort n
 |7| 	Gore Mountain| 	Belleayre Mountain 	|171.27|
 
 ---
+## Optimized Routing Functionality (Directed Graph Distance Minimization)
+
 The algorithm builds a route with a start at the lowest `vertical_rise`, this allows uniformity between the random and optimized comparisons. Utilizing the graph information from the DiGraph created earlier, we can determine the appropriate route which minimizes the distance traveled.
 
 While making sure that the next node is within the unvisited set, the next node is decided based on a comparison of all the available distances from the current node. This is determined through a dictionary search of unvisited nodes and their respective distances or weights, and selecting the edge and connected node with the minimum value.
