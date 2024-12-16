@@ -1,9 +1,61 @@
- .footer {
-     display: flex;
-     justify-content: center;
-     color: #000;
-     margin: 10px auto;
-     background-color: #99ccff;
-     width: 80%;
-     border-radius: 10px;
- }
+a:not(:disabled):not(:hover) {
+    outline-style: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    margin: 10px auto;
+    background-color: #99ccff;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.footer__items {
+    display: flex;
+    align-items: center;
+}
+
+.footer__team {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.footer__team-info {
+    display: flex;
+    flex-direction: column;
+    width: 57px;
+    align-items: center;
+}
+
+.footer__img {
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (max-width: 627px) {
+    .footer__team {
+        gap: 8px;
+    }
+
+    .footer__team-info {
+        border: none;
+        width: fit-content;
+    }
+
+    .footer__img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__team-info {
+        display: none;
+    }
+
+    .footer__items {
+        padding-left: 44px;
+    }
+}
