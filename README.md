@@ -16,5 +16,6 @@ Technologies used in this project include HTML, CSS, Javascript...
 
 ## Deployment
 
-This project is deployed...
+This project is deployed on GitHub pages<br> 
+
 [CODEJAM PROJECT LINK](https://jmik-thang.github.io/winter-vacation-spots/)
