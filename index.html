@@ -9,10 +9,6 @@
       content="Winter vacaiton for families in NY city, ski resort"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    />
 
     <link rel="icon" href="favicon-16x16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,25 +61,9 @@
       <main class="content page__section">
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Top resorts</h2>
-          <div class="filter content__filter">
-            The display type:
-            <button
-              type="button"
-              class="button filter__button"
-              data-elements-type="grid"
-            >
-              <i class="fa-brands fa-microsoft"></i>
-            </button>
-            <button
-              type="button"
-              class="button filter__button"
-              data-elements-type="column"
-            >
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
           <ul class="destinations__cards"></ul>
         </section>
+        
         <!-- Previdew image modal -->
         <div class="popup popup_preview-image">
           <div class="popup__content">
@@ -93,26 +73,16 @@
           </div>
         </div>
 
-        <!-- Card Template -->
-        <template id="card__template">
-          <li class="card page__section">
-            <img src="" alt="" class="card__image" />
-            <div class="card__name-description">
-              <h2 class="card__title"></h2>
-              <button class="card__description-button">More</button>
-            </div>
-            <p class="card__description"></p>
-          </li>
-        </template>
-
+  
         <!-- Horizontal card template  -->
     <template class="horizontal-card">
   <article class="card card_content_horizontal">
-    <div class="card__image" style=""></div>
-    <div class="card__description">
-      <h3 class="card__title">
-        Resort
-      </h3>
+   <img src="" alt="" class="card__image">
+    <div class="card__horizontal_name_description">
+      <h2 class="card__title"> </h2>
+      <hr>
+      <p class="card__description"></p>
+    </div>
 </template>
         <section class="tips" id="tips">
           <h2 class="tips__title">Ski tips for beginners</h2>
