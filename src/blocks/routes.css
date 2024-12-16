@@ -6,10 +6,11 @@
 }
 
 .routes__map {
-  background-color: #983a38;
+  background-color: #016d64;
 }
 
 .routes__map-title {
+  color: #983a38;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -26,12 +27,15 @@
 
 .routes__text {
   font-size: 16px;
-  color: #983a38;
+  color: #000;
   font-weight: 500;
   font-family: "spectral", serif;
   font-style: italic;
   width: 800px;
   margin-bottom: 40px;
+  background-color: #F5F5DC;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 627px) {

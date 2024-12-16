@@ -13,3 +13,9 @@
 .destinations {
   padding: 60px 0 30px;
 }
+
+.page__divider {
+  border-top: 15px double #016d64;
+  margin: 20px 0;
+
+}
