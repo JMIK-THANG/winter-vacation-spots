@@ -32,7 +32,6 @@
   font-style: italic;
   width: 800px;
 }
-
 @media screen and (max-width: 627px) {
   .routes__map {
     width: 288px;
