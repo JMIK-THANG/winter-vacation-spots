@@ -32,7 +32,6 @@
   filter: blur(0.5px);
   transform: scale(1.1);
 }
-
 @media screen and (max-width: 627px) {
   .header__title {
     font-size: 20px;
