@@ -2,11 +2,17 @@
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .routes__map {
   background-color: #983a38;
+}
+
+.routes__map-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .routes__title {
@@ -24,6 +30,7 @@
   font-weight: 500;
   font-family: "spectral", serif;
   font-style: italic;
+  width: 800px;
 }
 
 @media screen and (max-width: 627px) {
