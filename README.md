@@ -179,3 +179,16 @@ To reiterate the strategy of utilizing the graph network. It is designed to capt
 The optimized route significantly improves upon the distance minimization efficiency displayed by the random model. Between the random and optimized model there is a difference of **1030.11 miles** proving the significant enhancement to the routing. Overall an **85.6%** increase in route optimization has been achieved. Additionally, there was an overall improvement on the reported computation time between both routes.
 
 ![computation_time](https://github.com/JMIK-THANG/winter-vacation-spots/blob/main/notebooks/computation_time.png)
+
+# Members:
+
+[Clarke Brodnicki - Software Engineer](https://github.com/MHVXV)
+
+[Azionne - Software Engineer](https://github.com/Azionne)
+
+[Jmik Thang - Software Engineer](https://github.com/JMIK-THANG)
+
+[Umberto Fasci - Data Scientist](https://github.com/UmbertoFasci)
+
+[Ayya - Data Scientist]()
+
