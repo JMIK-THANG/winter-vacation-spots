@@ -1,8 +1,16 @@
 .routes-info {
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+.routes__content {
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .routes__map {
@@ -26,27 +34,35 @@
   justify-content: center;
 }
 
+.routes__text:first-of-type {
+  width: 400px;
+}
+
 .routes__text {
   font-size: 16px;
   color: #000;
   font-weight: 500;
   font-family: "spectral", serif;
   font-style: italic;
-  width: 800px;
-  margin-bottom: 40px;
-  background-color: #F5F5DC;
+  width: fit-content;
+  margin: 20px auto 40px;
+  background-color: #99ccff;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
 @media screen and (max-width: 890px) {
   .routes__map {
-    width: 768px;
-    height: 512px;
+    width: 360px;
+    height: 240px;
   }
 }
 
 @media screen and (max-width: 627px) {
+  .routes-info {
+    flex-direction: column;
+  }
+
   .routes__map {
     width: 288px;
     height: 288px;
@@ -62,8 +78,6 @@
     margin: 20px 10px 0;
   }
 
-  .routes__text {
-    width: 300px;
-  }
+
 
 }

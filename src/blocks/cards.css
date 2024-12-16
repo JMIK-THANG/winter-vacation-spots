@@ -44,7 +44,7 @@
   margin: 0;
   max-width: 400px;
   padding-top: 20px;
-  background-color: #F5F5DC;
+  background-color: #99ccff;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -130,7 +130,7 @@
 
 .card__horizontal_line {
   width: 100%;
-  border-top: 2px solid #016d64;
+  border-top: 2px solid #99ccff;
 }
 
 @media screen and (max-width: 890px) {

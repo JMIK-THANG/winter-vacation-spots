@@ -124,54 +124,47 @@
         <section class="routes" id="routes">
           
         </div>
-          <div class="routes__content">
+          <div>
             <h2 class="routes__title">Routes</h2>
-            <div class="routes-info">
-              <p class="routes__text">
-                Our interactive map highlights the optimal route between 9 premier
-                ski resorts in New York. Visualize your perfect ski trip, easily
-                plan your journey, and discover the best way to explore the
-                breathtaking slopes of the Adirondacks. With our detailed route
-                planning, you can make the most of your winter adventure.
-              </p>
-
-            <p class="routes__map-title">Random Route Generation Description:</p>
             <p class="routes__text">
-                Utilizing a random selection of ski resort points, and drive route data 
-                requested from the Open Source Routing Machine API, a random route was 
-                generated to visit every ski resort in our list. While taking this route 
-                you can expect to travel a total of 1718.56 miles. We recommend starting 
-                your journey at the Beartown Ski Area, where the vertical rise is the 
-                lowest on our list and should be easy skiing!
-              </p>
-              <iframe
-              id="myIframe"
-              class="routes__map"
-              src="./graphs/random_route1_full.html"
-              height="640"
-              width="960"
-              frameborder="0"
-            ></iframe>
+              Our interactive map highlights the optimal route between 9 premier
+              ski resorts in New York. Visualize your perfect ski trip, easily
+              plan your journey, and discover the best way to explore the
+              breathtaking slopes of the Adirondacks. With our detailed route
+              planning, you can make the most of your winter adventure.
+            </p>
+            <div class="routes-info">
+              
 
-            <p class="routes__map-title">Optimized Route Generation Description:</p>
+<div class="routes__content">
+            <p class="routes__map-title">Optimized Route</p>
             <p class="routes__text"> 
-                Leveraging the same data as before we created a Directed Graph which 
-                presented all ski resorts as nodes and the distances between each as 
-                the weighted edges. While making sure to start again at Beartown Ski 
-                Area the next location on our list is determined by selecting the edge 
-                with the minimal weight. After travelling to the next ski area, the 
-                travelled distance is recorded and no longer considered. This is 
-                repeated until we have arrived to all resorts. Using this route you 
-                can expect to travel only 688.45 miles .
+                A measly 688.45 miles.
                 </p>
             <iframe
               id="myIframe"
               class="routes__map"
               src="./graphs/optimized_route1_full.html"
-              height="640"
-              width="960"
+              height="320"
+              width="480"
               frameborder="0"
             ></iframe>
+          </div>
+
+          <div class="routes__content">
+            <p class="routes__map-title">Random Route</p>
+            <p class="routes__text">
+                A grueling 1718.56 miles. 
+              </p>
+              <iframe
+              id="myIframe"
+              class="routes__map"
+              src="./graphs/random_route1_full.html"
+              height="320"
+              width="480"
+              frameborder="0"
+            ></iframe>
+          </div>
              
           </div>
         </section>
