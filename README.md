@@ -190,5 +190,5 @@ The optimized route significantly improves upon the distance minimization effici
 
 [Umberto Fasci - Data Scientist](https://github.com/UmbertoFasci)
 
-[Ayya - Data Scientist]()
+[Ayyammal Govindaraj - Data Scientist](https://github.com/ayyammal-g)
 
