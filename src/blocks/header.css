@@ -4,6 +4,17 @@
   height: 300px; */
 }
 
+.header__img {
+  background: transparent;
+  height: 44px;
+  width: 120px;
+  position: absolute;
+  top: 58%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 .header__title {
   text-align: center;
   font-size: 44px;
@@ -43,6 +54,7 @@
     font-size: 14px;
     display: block;
     width: 288px;
+    margin: 15px auto;
   }
 
   .header__loop {
